@@ -1,0 +1,10 @@
+contiendra la liste des opérations ainsi que leur temps d'exécution
+suivant le format suivant, où le couple op1 désigne le numéro de l'opération
+et t1 son temps d'exécution :
+
+ex :
+
+op1 t1
+op2 t2
+op3 t3
+
