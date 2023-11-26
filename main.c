@@ -8,6 +8,7 @@
 struct Node {
     int id;
     int duration; // Durée de l'opération
+    int stationAssigned; // Numéro de station à laquelle l'opération est attribuée
     // Autres informations pertinentes
 };
 
@@ -36,12 +37,12 @@ void construireGraphe() {
 
     // Exemple simplifié : opérations et contraintes statiques
     int nbOperations = 6;
-    operations[0].id = 0; operations[0].duration = 3;
-    operations[1].id = 1; operations[1].duration = 4;
-    operations[2].id = 2; operations[2].duration = 2;
-    operations[3].id = 3; operations[3].duration = 5;
-    operations[4].id = 4; operations[4].duration = 2;
-    operations[5].id = 5; operations[5].duration = 3;
+    operations[0].id = 0; operations[0].duration = 3; operations[0].stationAssigned = -1;
+    operations[1].id = 1; operations[1].duration = 4; operations[1].stationAssigned = -1;
+    operations[2].id = 2; operations[2].duration = 2; operations[2].stationAssigned = -1;
+    operations[3].id = 3; operations[3].duration = 5; operations[3].stationAssigned = -1;
+    operations[4].id = 4; operations[4].duration = 2; operations[4].stationAssigned = -1;
+    operations[5].id = 5; operations[5].duration = 3; operations[5].stationAssigned = -1;
 
     addEdge(0, 1); // Exemple de contrainte de précédence : opération 0 doit précéder opération 1
     addEdge(0, 2);
@@ -54,11 +55,21 @@ void construireGraphe() {
 // Algorithme de tri topologique pour l'ordonnancement des opérations
 void triTopologique() {
     // Implémentation de l'algorithme de tri topologique (par exemple, DFS ou BFS)
+    // Cette fonction remplira les opérations dans un ordre respectant les contraintes
 }
 
 // Allocation des opérations aux stations en respectant les contraintes
 void repartitionStations() {
-    // Implémentation de l'allocation des opérations aux stations
+    int tempsTotal = 0;
+    for (int i = 0; i < MAX_OPERATIONS; ++i) {
+        struct Node *operation = &operations[i];
+        if (operation->stationAssigned == -1) {
+            // Affecter l'opération à une station disponible
+            operation->stationAssigned = /* station disponible */
+            tempsTotal += operation->duration;
+        }
+    }
+    // Calculer les temps de cycle et optimiser l'allocation
 }
 
 int main() {
