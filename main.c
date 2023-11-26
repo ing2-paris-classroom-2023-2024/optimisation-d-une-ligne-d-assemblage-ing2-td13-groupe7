@@ -66,7 +66,9 @@ int main() {
     triTopologique();
     repartitionStations();
 
-    //temps de cycle
+
+
+    ///temps de cycle
 
     int num_operations = 10;
     int operations[] = {3, 5, 2, 7, 4, 6, 2, 8, 3, 4};
@@ -81,6 +83,9 @@ int main() {
         printf("%d ", station_assignments[i]);
     }
     printf("\n");
+
+    ///temps de cycle
+
 
     return 0;
 }
