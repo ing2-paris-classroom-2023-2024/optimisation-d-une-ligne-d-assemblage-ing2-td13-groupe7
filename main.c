@@ -77,5 +77,21 @@ int main() {
     triTopologique();
     repartitionStations();
 
+    //temps de cycle
+
+    int num_operations = 10;
+    int operations[] = {3, 5, 2, 7, 4, 6, 2, 8, 3, 4};
+    int temps_de_cycle = 10;
+    int station_assignments[MAX_STATIONS];
+
+    int result = optimisationNombreStations(operations, num_operations, temps_de_cycle, station_assignments);
+
+    printf("Nombre optimal de stations : %d\n", result);
+    printf("Affectations des stations : ");
+    for (int i = 0; i < num_operations; ++i) {
+        printf("%d ", station_assignments[i]);
+    }
+    printf("\n");
+
     return 0;
 }
