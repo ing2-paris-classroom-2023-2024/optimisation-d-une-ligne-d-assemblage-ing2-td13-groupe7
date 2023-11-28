@@ -1,1 +1,0 @@
-//information de la durée de temps de cycle en secondes :
