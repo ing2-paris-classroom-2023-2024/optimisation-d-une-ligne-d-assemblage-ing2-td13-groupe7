@@ -7,4 +7,3 @@
 
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TD13_GROUPE7_PROTOTYPE_TEMPS_CYCLE_H
 
-int* assignerStations(int operations[], int num_operations, int time_cycle);
