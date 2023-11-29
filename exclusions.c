@@ -10,7 +10,7 @@ int nbOperations = 0; // Nombre d'opérations
 
 // Fonction pour lire les exclusions à partir du fichier texte
 void lireExclusions() {
-    FILE *fichier = fopen("C:/Users/nicol/OneDrive/Bureau/exclusions.txt","r");;
+    FILE *fichier = fopen("C:/Users/nicol/OneDrive/Bureau/exclusions.txt","r");
     if (fichier == NULL) {
         printf("Impossible d'ouvrir le fichier.");
         return;
@@ -61,7 +61,7 @@ int colorationGraphe() {
         }
 
         if (stations[i] == -1) {
-            stations[i] = i; // Attribuer une station à l'opération
+            stations[i] = couleur[i]; // Attribuer une station à l'opération basée sur la couleur
         }
     }
 
@@ -71,6 +71,17 @@ int colorationGraphe() {
         if (couleur[i] > maxStations) {
             maxStations = couleur[i];
         }
+    }
+
+    // Affichage des opérations réparties dans chaque station
+    for (i = 0; i <= maxStations; ++i) {
+        printf("Station %d : ", i + 1);
+        for (j = 1; j <= nbOperations; ++j) {
+            if (stations[j] == i) {
+                printf("%d ", j);
+            }
+        }
+        printf("\n");
     }
 
     return maxStations + 1; // Ajouter 1 car les couleurs commencent à partir de 0
