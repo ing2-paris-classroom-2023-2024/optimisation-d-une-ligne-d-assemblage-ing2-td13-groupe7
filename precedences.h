@@ -6,3 +6,11 @@
 #define OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TD13_GROUPE7_PRECEDENCES_H
 
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TD13_GROUPE7_PRECEDENCES_H
+#ifndef PRECEDENCE_H
+#define PRECEDENCE_H
+
+#include "graph.h"
+
+void readPrecedenceRelations(Graph* graph, const char* filename);
+
+#endif // PRECEDENCE_H

@@ -1,0 +1,16 @@
+//
+// Created by nicol on 02/12/2023.
+//
+
+#ifndef OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TD13_GROUPE7_EXCLUSIONS_H
+#define OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TD13_GROUPE7_EXCLUSIONS_H
+
+#endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_ING2_TD13_GROUPE7_EXCLUSIONS_H
+#ifndef EXCLUSION_H
+#define EXCLUSION_H
+
+#include "graph.h"
+
+void readExclusionPairs(Graph* graph, const char* filename);
+
+#endif // EXCLUSION_H
