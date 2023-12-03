@@ -7,7 +7,7 @@ int main() {
     Graph* graph = createGraph(MAX_OPERATIONS);
 
 
-    readPrecedenceRelations(graph, "C:/Users/nicol/OneDrive/Bureau/precedences.txt");
+    readPrecedenceRelations(graph, "C:/Users/nicol/OneDrive/Bureau/precedences.txt"); //utilisation du chemin d'acces car il y a moins de problèmes
     readOperationTimes(graph, "C:/Users/nicol/OneDrive/Bureau/operations.txt");
     readExclusionPairs(graph, "C:/Users/nicol/OneDrive/Bureau/exclusions.txt");
     float timeCycle = readTimeCycle("C:/Users/nicol/OneDrive/Bureau/temps_cycle.txt");
