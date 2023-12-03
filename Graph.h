@@ -14,12 +14,16 @@
 #define MAX_OPERATIONS 36
 
 typedef struct {
+    bool applyTimeConstraint;
+    bool applyExclusionConstraint;
+    bool applyPrecedenceConstraint;
     bool adjMatrix[MAX_OPERATIONS][MAX_OPERATIONS];
     int inDegree[MAX_OPERATIONS];
     bool exists[MAX_OPERATIONS];
     float operationTime[MAX_OPERATIONS];
     bool exclusionMatrix[MAX_OPERATIONS][MAX_OPERATIONS];
     int V;
+    float timeCycle;
 } Graph;
 
 Graph* createGraph(int V);

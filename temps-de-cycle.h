@@ -14,7 +14,7 @@
 #include "graph.h"
 
 float readTimeCycle(const char* filename);
-void bfs(Graph* graph, bool visited[], float timeCycle);
+void bfs(Graph* graph);
 void readOperationTimes(Graph* graph, const char* filename);
 
 #endif // TIME_CYCLE_H
